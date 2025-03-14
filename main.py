@@ -105,4 +105,7 @@ if current_chunk:
     expressionList.append(current_chunk.lower())
 
 rpn_result = to_rpn(expressionList)
-print("Result:", calculate_rpn(rpn_result))
+if float(calculate_rpn(rpn_result)) == int(calculate_rpn(rpn_result)):
+    print("Result:", int(calculate_rpn(rpn_result)))
+else:
+    print("Result:", calculate_rpn(rpn_result))
